@@ -6,10 +6,12 @@ export const initiateApp = (app, express) => {
   const port = process.env.PORT;
 
   app.use(express.json());
-
+  app.use("/uploads",express.static("uploads"))
   connectDB();
 
   app.use("/auth", routers.authRouter);
+  app.use("/message", routers.messageRouter);
+  app.use("/user", routers.userRouter);
 
   app.all("*", (req, res, next) => {
     return next(new Error("page not found"));
