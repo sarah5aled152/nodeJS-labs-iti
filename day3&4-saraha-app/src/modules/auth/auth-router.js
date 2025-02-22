@@ -15,7 +15,7 @@ router.get(
   validationMiddleware(authValidation.activateAccountSchema),
   authController.activateAccount
 );
-router.get(
+router.post(
   "/login",
   validationMiddleware(authValidation.logInSchema),
   authController.logIn

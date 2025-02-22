@@ -10,8 +10,8 @@ export const signUpSchema = {
         .required(),
       password: joi
         .string()
-        .min(8)
-        .pattern(new RegExp("^[a-zA-Z0-9]{3,30}$"))
+        .min(4)
+
         .required(),
 
       confirmpassword: joi.ref("password"),
@@ -40,8 +40,8 @@ export const logInSchema = {
         .required(),
       password: joi
         .string()
-        .min(8)
-        .pattern(new RegExp("^[a-zA-Z0-9]{3,30}$"))
+        .min(4)
+
         .required(),
     })
     .required(),

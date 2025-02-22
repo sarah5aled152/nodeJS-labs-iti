@@ -1,12 +1,12 @@
 import { connectDB } from "../DB/db-connection.js";
 
 import * as routers from "./modules/index-routers.js";
-
+import cors from "cors";
 export const initiateApp = (app, express) => {
   const port = process.env.PORT;
-
+  app.use(cors());
   app.use(express.json());
-  app.use("/uploads",express.static("uploads"))
+  app.use("/uploads", express.static("uploads"));
   connectDB();
 
   app.use("/auth", routers.authRouter);

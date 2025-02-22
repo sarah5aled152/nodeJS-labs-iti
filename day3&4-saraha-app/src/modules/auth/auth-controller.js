@@ -94,5 +94,5 @@ export const logIn = asyncHandler(async (req, res, next) => {
 
   const token = Jwt.sign({ id: checkUser._id }, process.env.TOKEN_SECRET);
 
-  res.json({ success: true, message: "logged In", token });
+  res.json({ success: true, message: "logged In", token: token });
 });

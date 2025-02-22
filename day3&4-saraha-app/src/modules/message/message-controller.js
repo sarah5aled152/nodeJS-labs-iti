@@ -61,7 +61,9 @@ export const DeleteMessage = asyncHandler(async (req, res, next) => {
 
   if (!CheckMessage) {
     return next(
-      new Error("Message not found or user not allowed", { cause: 404 })
+      new Error("Message not found or user not allowed to delete", {
+        cause: 404,
+      })
     );
   }
 

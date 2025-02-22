@@ -1,0 +1,27 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Playwrite+MX+Guides&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap");
+
+body {
+  background-color: #131722 !important;
+  font-family: "Montserrat", serif;
+  color: #ffff !important;
+}
+
+input {
+  background-color: transparent !important;
+  color: #ffff !important;
+}
+
+input::placeholder {
+  color: #ffff !important;
+}
+
+li {
+  list-style: none;
+}
+
+li:nth-child(odd) {
+  background-color: #373e50;
+  padding: 8px;
+  border-radius: 10px;
+  margin: 10px 0;
+}
